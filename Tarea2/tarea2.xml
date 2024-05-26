@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listado_afiliados [
+<!ELEMENT listado_afiliados (afiliado+)>
+<!ELEMENT afiliado (dni_o_nie, nombre, apellidos, situacion_laboral, fecha_nacimiento, listado_bajas, listado_prestaciones)>
+<!ELEMENT dni_o_nie (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT situacion_laboral (#PCDATA)>
+<!ELEMENT fecha_nacimiento (dia, mes, anio)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+<!ELEMENT listado_bajas (baja*)>
+<!ELEMENT baja (causa, fecha_inicio, fecha_final?)>
+<!ELEMENT causa (#PCDATA)>
+<!ELEMENT fecha_inicio (#PCDATA)>
+<!ELEMENT fecha_final (#PCDATA)>
+<!ELEMENT listado_prestaciones (prestacion*)>
+<!ELEMENT prestacion (cantidad, fecha_inicio, fecha_final)>
+<!ELEMENT cantidad (#PCDATA)>
+
+<!ATTLIST situacion_laboral
+    value (en_paro | en_activo | jubilado | edad_no_laboral) #REQUIRED>
+]>
+<listado_afiliados>
+    <afiliado>
+        <dni_o_nie>12345678A</dni_o_nie>
+        <nombre>Juan</nombre>
+        <apellidos>Pérez Gómez</apellidos>
+        <situacion_laboral value="en_activo">en_activo</situacion_laboral>
+        <fecha_nacimiento>
+            <dia>15</dia>
+            <mes>03</mes>
+            <anio>1985</anio>
+        </fecha_nacimiento>
+        <listado_bajas>
+            <baja>
+                <causa>Accidente laboral</causa>
+                <fecha_inicio>2024-01-01</fecha_inicio>
+                <fecha_final>2024-01-10</fecha_final>
+            </baja>
+        </listado_bajas>
+        <listado_prestaciones>
+            <prestacion>
+                <cantidad>1000</cantidad>
+                <fecha_inicio>2023-02-01</fecha_inicio>
+                <fecha_final>2023-02-28</fecha_final>
+            </prestacion>
+        </listado_prestaciones>
+    </afiliado>
+    <afiliado>
+        <dni_o_nie>87654321B</dni_o_nie>
+        <nombre>Maria</nombre>
+        <apellidos>López Fernández</apellidos>
+        <situacion_laboral value="jubilado">jubilado</situacion_laboral>
+        <fecha_nacimiento>
+            <dia>20</dia>
+            <mes>06</mes>
+            <anio>1950</anio>
+        </fecha_nacimiento>
+        <listado_bajas>
+        </listado_bajas>
+        <listado_prestaciones>
+            <prestacion>
+                <cantidad>800</cantidad>
+                <fecha_inicio>2023-03-01</fecha_inicio>
+                <fecha_final>2023-03-31</fecha_final>
+            </prestacion>
+        </listado_prestaciones>
+    </afiliado>
+</listado_afiliados>

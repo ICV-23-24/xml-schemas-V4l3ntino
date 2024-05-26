@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articulos fechaGeneracion="2024-05-26">
+    <monitor codigo="ABC-DEF-123">
+        <descripcion>Monitor Full HD</descripcion>
+        <resolucion>
+            <ancho>1920</ancho>
+            <alto>1080</alto>
+        </resolucion>
+    </monitor>
+    <teclado codigo="GHI-JKL-456">
+        <descripcion>Teclado mecánico</descripcion>
+    </teclado>
+    <raton codigo="MNO-PQR-789">
+        <descripcion>Ratón ergonómico</descripcion>
+        <peso unidad="g">120</peso>
+    </raton>
+</articulos>

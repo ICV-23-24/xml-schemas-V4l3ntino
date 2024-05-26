@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="registro.xsd">
+    <contacto>
+        <telefono>+34 123456789</telefono>
+    </contacto>
+    <vehiculo>
+        <matricula>1234ABC</matricula>
+    </vehiculo>
+</registro>
